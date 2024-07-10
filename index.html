@@ -15,34 +15,6 @@
         <h1 class="titulo">Quadro Interativo AC-21</h1>
         <img Class="Cabeçalho-Imagem" src="new_K-C_logo_blue-removebg-preview.png">
         <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Pesquisar">
-        <script>
-                function removeSpecialChars(str) {
-                return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^\w\s]/gi, '').toUpperCase();
-                }
-                
-                function searchFunction() {
-                // Obtenha o valor do campo de pesquisa
-                var input, filter, buttons, text;
-                input = document.getElementById('searchInput');
-                filter = removeSpecialChars(input.value.trim());
-                
-                 // Obtenha todos os botões com a classe "Conteudo-principal-escrito-botao"
-                buttons = document.getElementsByClassName('Conteudo-principal-escrito-botao');
-                
-                // Percorra todos os botões e oculte aqueles que não correspondem à pesquisa
-                for (var i = 0; i < buttons.length; i++) {
-                 // Verifique se o botão não tem a classe "PRO"
-                                if (!buttons[i].classList.contains('PRO')) {
-                                    text = removeSpecialChars(buttons[i].textContent || buttons[i].innerText);
-                                if (text.indexOf(filter) > -1) {
-                                        buttons[i].style.visibility = "visible";
-                                } else {
-                                        buttons[i].style.visibility = "hidden";
-                                }
-                         }
-                        }
-                }
-                    </script>
         <nav Class="Cabeçalho-Menu">
             <a class="Cabeçalho-Menu-Item" target="_blank" href="https://kimberlyclark.sharepoint.com/Sites/H945/">Portal de Melhoria Continua</a>
         </nav>
